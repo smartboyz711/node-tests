@@ -1,5 +1,7 @@
-const db = require('./db.js');
+var db = require('./db.js');
 
 module.exports.handleSignup = (email, password) => {
-   db.saveUser({email,password});
+  // Check if email already exists
+  db.saveUser({email, password});
+  // Send the welcome email
 };
